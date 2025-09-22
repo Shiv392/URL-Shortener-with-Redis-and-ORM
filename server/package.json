@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "this is server side folder to build APIs ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiv392/URL-Shortener-with-Redis-and-ORM.git"
+  },
+  "author": "shiv soni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shiv392/URL-Shortener-with-Redis-and-ORM/issues"
+  },
+  "homepage": "https://github.com/Shiv392/URL-Shortener-with-Redis-and-ORM#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "expresss": "^0.0.0"
+  }
+}

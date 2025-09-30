@@ -1,15 +1,10 @@
-const express = require('express');
-const app = express();
-const port = 8080;
+const app = require('./config/app.js');
 const dotenv = require('dotenv');
 dotenv.config();
+const port = 8080;
 
 const sequelize = require('./db/db_connection');
 const {user_schema} = require('./schema/index.js');
-
-app.get('/', (req, res) => {
-    return res.send(`<h1>This is home route </h1>`);
-});
 
 (() => {
     sequelize.sync({ alter: true }).then(() => {

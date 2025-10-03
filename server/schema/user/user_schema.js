@@ -8,8 +8,8 @@ const user = sequelize.define('user', {
     //user is the name of the model.
     //it is used while opration like sequelize.models.user, associations etc.
     user_id : {
-        type : DataTypes.UUID,
-        defaultValue : DataTypes.UUIDV4,
+        type : DataTypes.INTEGER,
+        autoIncrement : true,
         primaryKey : true,
         allowNull : false,
         unique : true
@@ -20,7 +20,7 @@ const user = sequelize.define('user', {
     },
     last_name : {
         type : DataTypes.STRING(20),
-        allowNull : false
+        allowNull : true
     },
     user_email : {
         type : DataTypes.STRING(),

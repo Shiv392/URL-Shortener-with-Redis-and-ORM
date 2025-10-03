@@ -26,7 +26,6 @@ const test_connection = async()=>{
     try{
         console.log(process.env.DATABASE_NAME)
      await sequelize.authenticate();
-     console.log('successfull connection with db -------->')
     }
     catch(err){
      console.log('db connection error----->', err);

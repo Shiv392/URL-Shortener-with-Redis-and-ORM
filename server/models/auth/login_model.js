@@ -9,7 +9,6 @@ if(!user){
     throw error;
 }
 
-console.log('login user----->', user.dataValues);
 const {user_password} = user.dataValues;
 
 const match = await bcrypt_password(password, user_password);
@@ -19,9 +18,13 @@ error.status_code = 403;
 throw error;
 }
 else{
-return user;
+delete user.dataValues.user_password;
+delete user.dataValues.last_login;
+delete user.dataValues.createdAt;
+delete user.dataValues.updatedAt;
+
+return user.dataValues
 }
 
-// const match = await bcrypt_password()
 }
 module.exports = login_model;

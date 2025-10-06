@@ -3,7 +3,7 @@ dotenv.config();
 const app = require('./config/app.js');
 
 const sequelize = require('./db/db_connection');
-const {user_schema} = require('./schema/index.js');
+const {user_schema, url_schema} = require('./schema/index.js');
 
 (() => {
     sequelize.sync({ alter: true }).then(() => {

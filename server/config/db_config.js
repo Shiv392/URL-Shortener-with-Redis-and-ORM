@@ -24,7 +24,6 @@ const sequelize = new Sequelize(
 
 const test_connection = async()=>{
     try{
-        console.log(process.env.DATABASE_NAME)
      await sequelize.authenticate();
     }
     catch(err){

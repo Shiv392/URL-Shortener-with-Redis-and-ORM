@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const app = require('./config/app.js');
 
-const sequelize = require('./db/db_connection');
+const sequelize = require('./config/db_config.js');
 const {user_schema, url_schema} = require('./schema/index.js');
 
 (() => {
